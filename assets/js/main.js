@@ -26,6 +26,6 @@ function rechner(){
         document.getElementById("endpreis").innerHTML = (input + diff).toFixed(2) + " €";
     } else {
         document.getElementById("mwstb").innerHTML = diff.toFixed(2) + " €";
-        document.getElementById("enpreis").innerHTML = (input - diff).toFixed(2) + " €";
+        document.getElementById("endpreis").innerHTML = (input - diff).toFixed(2) + " €";
     }
 }
