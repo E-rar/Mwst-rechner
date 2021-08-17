@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MwSt-Rechner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <fieldset>
+    <form action="" onsubmit="return false">
+    <h4>Was soll berechnet werden?</h4>
+    <input type="radio" name="Netto/Brutto" id="nzb" checked="checked" onchange="changeText1()">
+    <label for="nzb">Mehrwertsteuer aufschlagen(Netto zu Brutto)</label><br><br>
+    <input type="radio" name="Netto/Brutto" id="bzn" onchange="changeText2()">
+    <label for="bzn">Mehrwertsteuer abziehen(Brutto zu Netto)</label>
+    <h4>Mehrwertsteuersatz</h4>
+    <input type="radio" name="mw_st" id="neunzehn">
+    <label for="neunzehn" value="0.19" checked="checked"> 19%</label>
+    <input type="radio" name="mw_st" id="sieben" >
+    <label for="neunzehn" value="0.07"> 7%</label>
+    <h4 id="changingText1"></h4>
+    <!-- hier der text ändert sich -->
+    <input type="number" name="Preis" id="preis">
+    <input type="submit" value="BERECHNEN" onclick="rechner()" >
+    <div>
+        <h5>Ergebnis</h5>
+        <h4>Mehrwertsteuerbetrag</h4>
+        <p id="mwstb"></p><br>
+        <h4 id="changingText2"></h4>
+        <!-- hier der text ändert sich -->
+        <p id="endpreis"></p>
+
+    </div>
+    </form>
+    </fieldset>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
